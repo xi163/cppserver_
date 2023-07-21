@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pb">
+      <UniqueIdentifier>{8ac0a16b-5eab-4b01-abd0-cb07d3d009c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_texas">
+      <UniqueIdentifier>{99f9db34-02b5-4dc0-8545-1f0978bfd43c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{5d01959d-923a-42fb-8f10-a4d727888030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logger">
+      <UniqueIdentifier>{b02db4f3-c73e-423d-9b48-a4b582da054f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Game_texas</Filter>
+    </ClCompile>
+    <ClCompile Include="TableFrameSink.cpp">
+      <Filter>Game_texas</Filter>
+    </ClCompile>
+    <ClCompile Include="texas.cpp">
+      <Filter>Game_texas</Filter>
+    </ClCompile>
+    <ClCompile Include="funcC.cpp">
+      <Filter>Game_texas</Filter>
+    </ClCompile>
+    <ClCompile Include="cfg.cpp">
+      <Filter>Game_texas</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\proto\texas.Message.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TableFrameSink.h">
+      <Filter>Game_texas</Filter>
+    </ClInclude>
+    <ClInclude Include="texas.h">
+      <Filter>Game_texas</Filter>
+    </ClInclude>
+    <ClInclude Include="funcC.h">
+      <Filter>Game_texas</Filter>
+    </ClInclude>
+    <ClInclude Include="cfg.h">
+      <Filter>Game_texas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\proto\texas.Message.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Framework\game_serv\interface\IPlayer.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Framework\game_serv\interface\IReplayRecord.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Framework\game_serv\interface\IRobotDelegate.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Framework\game_serv\interface\ITable.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Framework\game_serv\interface\ITableDelegate.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\thirdpart\Logger\src\log\Logger.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\thirdpart\Logger\src\Macro.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\thirdpart\Logger\src\utils\utils.h">
+      <Filter>Logger</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
