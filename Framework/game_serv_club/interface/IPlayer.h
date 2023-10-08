@@ -1,7 +1,7 @@
 #ifndef INCLUDE_IPLAER_H
 #define INCLUDE_IPLAER_H
 
-#include "public/Inc.h"
+#include "Logger/src/Macro.h"
 
 class IRobotDelegate;
 struct UserBaseInfo;
@@ -14,14 +14,24 @@ public:
 	virtual bool Valid() = 0;
 	virtual bool IsRobot() = 0;
 	virtual bool IsOfficial() = 0;
+	virtual bool ExistOnlineInfo() = 0;
 	virtual std::shared_ptr<IRobotDelegate> GetDelegate() = 0;
 	/// <summary>
 	/// IRobotDelegate消息回调
 	/// </summary>
+	/// <param name="mainId"></param>
+	/// <param name="subId"></param>
+	/// <param name="data"></param>
+	/// <param name="len"></param>
+	/// <returns></returns>
 	virtual bool SendUserMessage(uint8_t mainId, uint8_t subId, uint8_t const* data, size_t len) = 0;
 	/// <summary>
 	/// ITableDelegate消息回调
 	/// </summary>
+	/// <param name="subId"></param>
+	/// <param name="data"></param>
+	/// <param name="len"></param>
+	/// <returns></returns>
 	virtual bool SendTableMessage(uint8_t subId, uint8_t const* data, size_t len) = 0;
 	virtual int64_t GetUserId() = 0;
 	virtual const std::string GetAccount() = 0;
@@ -30,10 +40,10 @@ public:
 	virtual uint8_t GetHeadboxId() = 0;
 	virtual uint8_t GetVip() = 0;
 	virtual std::string GetHeadImgUrl() = 0;
-	virtual uint32_t GetTableId() = 0;
-	virtual void SetTableId(uint32_t tableId) = 0;
-	virtual uint32_t GetChairId() = 0;
-	virtual void SetChairId(uint32_t chairId) = 0;
+	virtual uint16_t GetTableId() = 0;
+	virtual void SetTableId(uint16_t tableId) = 0;
+	virtual uint16_t GetChairId() = 0;
+	virtual void SetChairId(uint16_t chairId) = 0;
 	virtual int64_t GetUserScore() = 0;
 	virtual void SetUserScore(int64_t userScore) = 0;
 	virtual void SetCurTakeScore(int64_t score) = 0;
