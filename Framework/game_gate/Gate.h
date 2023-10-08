@@ -15,24 +15,6 @@
 
 #include "IPLocator/IPLocator.h"
 
-static void setFailedResponse(muduo::net::HttpResponse& rsp,
-	muduo::net::HttpResponse::HttpStatusCode code = muduo::net::HttpResponse::k200Ok,
-	std::string const& msg = "") {
-	rsp.setStatusCode(code);
-	rsp.setStatusMessage("OK");
-	rsp.addHeader("Server", "MUDUO");
-#if 0
-	rsp.setContentType("text/html;charset=utf-8");
-	rsp.setBody("<html><body>" + msg + "</body></html>");
-#elif 0
-	rsp.setContentType("application/xml;charset=utf-8");
-	rsp.setBody(msg);
-#else
-	rsp.setContentType("text/plain;charset=utf-8");
-	rsp.setBody(msg);
-#endif
-}
-
 class GateServ : public muduo::noncopyable {
 public:
 	typedef std::function<
